@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>Upload Your Event Proposal</title>
-  
-   <script src="darkmode.js">
+
+  <script src="darkmode.js">
   </script>
 
 </head>
@@ -19,9 +19,11 @@
 <body>
   <p id="btn"></p>
   <div class="blue">
-    <marquee scrollamount="8" direction="right"> <h3>Welcome To Department Of Computer Applications</h3>  </marquee>
+    <marquee scrollamount="8" direction="right">
+      <h3>Welcome To Department Of Computer Applications</h3>
+    </marquee>
   </div>
- 
+
   <header>
     <ul class="nav">
 
@@ -101,8 +103,51 @@
   <br>
   <br>
   <main>
+    <div>
+      <center>
+        <h2> Upload your Event</h2>
+        <form id=eventDetails>
+          <label><b>Student Id</b></label><br>
+          <input type="text" placeholder="Enter Student Id" id="stdId" required><br>
+          <label><b>Student Name</b></label><br>
+          <input type="text" placeholder="Enter your name" id="stdName" required><br>
+          <label><b>Course</b></label><br>
+          <input type="text" placeholder="Course" id="stdCourse" required><br>
+          <label><b>Semester</b></label><br>
+          <input type="text" placeholder="Enter semester" id="stdSem" required><br>
+          <label><b>Name of event</b></label><br>
+          <input type="text" placeholder="Enter event name" id="eventName" required><br>
+          <label><b>Duration of event</b></label><br>
+          <input type="text" placeholder="Enter event duration" id="eventDuration" required><br>
+          <label><b>Date of event</b></label><br>
+          <input type="date" placeholder="Enter event date" id="eventDate" required><br>
+          <label><b>Event description</b></label><br>
+          <input type="text" placeholder="Enter event description" id="eventDesc" required><br>
+          <label><b>Conveyner's name</b></label><br>
+          <input type="text" placeholder="Enter conveyner's name" id="eventConv" required><br>
 
-  
+          <input type="submit" value="Submit">
+        </form>
+        <script>
+          var form = document.querySelector("#eventDetails")
+          formId.onsubmit = async (e) => {
+            e.preventDefault();
+            data = {
+              student_Id: form.querySelector('input[id="stdId"]').value,
+              student_Name: form.querySelector('input[id="stdName"]').value,
+              course: form.querySelector('input[id="stdCourse"]').value,
+              semester: form.querySelector('input[id="stdSem"]').value,
+              event_Name: form.querySelector('input[id="eventName"]').value,
+              event_Duration: form.querySelector('input[id="eventDuration"]').value,
+              event_Date: form.querySelector('input[id="eventDate"]').value,
+              conveyner_Name: form.querySelector('input[id="eventDesc"]').value,
+              description: form.querySelector('input[id="eventConv"]').value
+            }
+          }
+        </script>
+      </center>
+    </div>
+
   </main>
   <footer>
     &copy;
