@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="nav bar.css">
+  <link rel="stylesheet" href="faculty.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Faculty</title>
+
+  <script src="darkmode.js">
+  </script>
+
+</head>
+
+<body>
+  
+  <p id="btn"></p>
+  <div class="blue">
+    <marquee scrollamount="8" direction="right"> <h3>Welcome To Department Of Computer Applications</h3>  </marquee>
+  </div>
+  <header>
+    <ul class="nav">
+
+      <li class="nav1">
+        <a href=https://www.invertisuniversity.ac.in target="_blank">
+          <img
+            src="https://lh3.googleusercontent.com/pw/AM-JKLUHOoOl_CcyCl6rTFdf9OQU_HGg_EKKwAJxsy0eAHLLVpwFDakKR3cGTZ0wKmMgl5mifxB0pA2_UJeg9agW-35rAf_ELoC3u7lEOeha5azTiGwzCCuAucFKHlYyEIzMMYPRcjXF8KeD4qsMXGX99E_3=w296-h83-no?authuser=0"
+            class="img" name="1">
+        </a>
+      </li>
+
+     
+      <li class="nav1" style="padding-left: 20px;">
+        <a class="nav2" href="index.html"> <i class="fa fa-home"></i> Home </a>
+      </li>
+
+      <li class="nav1">
+        <a class="nav2" href="course.html" target="_blank"> <i class="fa fa-graduation-cap"></i> Courses</a>
+      </li>
+
+      <li class="nav1">
+        <div class="event">
+          <button class="eventbtn"><i class="fa fa-calendar"></i> Event </button>
+          <div class="event-content">
+            <a href="Upload Your Event Proposal.html" target="_blank"> <i class="fa fa-calendar-plus-o"></i> Upload Your
+              Event Proposal</a>
+            <a href="Current Events Approved.html" target="_blank"> <i class="fa fa-calendar-check-o"></i> Current
+              Events Approved</a>
+            <a href="Event History.html" target="_blank"> <i class="fa fa-calendar"></i> Event History </a>
+            <a href="Admin Login.html" target="_blank"> <i class="fa fa-user"></i> Admin Login </a>
+            <a href="Details.html" target="_blank"> <i class="fa fa-bars"></i> More Details </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav1" class="aKp aKe-aLf" style="user-select: none;">
+        <!-- <div class="aKp aKe-aLf" style="user-select: none;"> -->
+        <a class="nav2" href="About Developers.html" target="_blank"> <i class="fa fa-user"></i> About Developers</a>
+      </li>
+      <li class="nav1">
+        <div class="more">
+          <button class="morebtn">More
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="more-content">
+            <a href="Contact Us.html" target="_blank"> <i class="fa fa-address-book"></i> Contact Us</a>
+            <a href="faculty.html"> <i class="fa fa-group"></i> Faculty</a>
+
+            <div class="mode"> <i class="fa fa-moon-o" style="font-size:20px"></i>
+              Dark mode:
+
+              <span class="change">OFF</span>
+
+
+            </div>
+
+          </div>
+        </div>
+      </li>
+    </ul>
+    <script>
+      $(".change").on("click", function () {
+        if ($("body").hasClass("dark")) {
+          $("body").removeClass("dark");
+          $(".change").text("OFF");
+        } else {
+          $("body").addClass("dark");
+          $(".change").text("ON");
+        }
+      });
+    </script>
+
+
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <main>
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/ltKRrRLOqF-Xjhg_-osx9_qasaExB6i145ZAKUzNCgJq05fhvCRyvuD6q35ZanZQ6__iqst9du6La0Q57KZyxABCeVZuZgV0K34GPqacv7eAq59Zo8Ow0m8loLiX5BXO5CDvCM6M5z2VtKrOmfzcKZ2j0sLVH35CCfamIF7wKFi2DW0QT53AFJ2dw8kFL6vtJ9O1wD7mWV_6MJebZ9JdkW-J3Bhu0XW_FXdDmyk1lzDzMcc7JJzGfpO66rrLGFE0xmwjaT0vNyHz2gbuy-82g7lKGjOSsFGMvvoXV-NSvEMqwXwQt9l8e6RkJ7fgtdTwNplrd-F9R-Xf6gtNdUGc9o6xmccGNLQeluDlbxATMRO1zUDPwUP4ZDgufWzEKGksSG1ycHKtUO6WJbDfl3uOGWh0iXbPuvSxSRdqrqpNedb_pfwQW4Skek0w6q3KN0JT3HWMk9Agm-A-Mjk0D5Ne-BuSQkZ8UX0q0XoS_nGCRuAKwaD2pIGAjwCQSZ3PU5b1gRSXF0P5YP9R7lZ2gpVxl2rjSDUv_TnpcObyqwUWRUSdrJFzM0HzweoVZUpSFhjC65qVsQcw93tIfIZPc1fxThsL75-bGtznbTeLpWDAP2Kc9Tj46ojFbkJK3wqUdaOb3VBJyG0jTuxX9U8rkD90S8tad32zliiSj5WBaSBz3okN7kYSHbip04FQR6s30DE5dI126h25oGs7PgS5fEnUC-Xo=s327-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Mr. Jitendra Kumar Chaudhary</h1>
+        <br>
+        <h4>Head of Department</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultydetails/Hod-Computer-Application" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/e6psvMJyr5kMuftkme3bX1_WnvfqGcT8_jcsUFAPtfv1NsLXHZyuqEDUEX97PiOmlFKOGNHWqXcn1TSg_pVnfDEjxrEELOInxiTflV1XhLoh-9kRYTbyFN4VsqRweFYtxoxq__a9SMiDCPPkr1pzVlXubQt2vFJNXEXarhLFqWFQGhyaCnfFhuDDegZwifCyWACM_or3GWz7ZDoI2A5C0281WLGlqJjpGfQ89mQuBrl7w6e8nL1iEToh7-OSnfdpPT_ChhOzA_Yjyd5coYiVMTIvTz9C5s_1DAwujFL_JebGErzklP1zEZzsXlrTigHuEfQocAvYK1ADxbOEjvvn2_q7vSqopBDFUdnFC5_Dqrwe7Ti2Ughh8M9bLeinEkVTD1Zh9-52FL2Vw8EgMwCoN9gQwxHsLMTMf2FT5Q2ZVXKo8qaEW9q1AvuKKtndDsYsXGzcUmt_ZM2AZFZ2t4dGyPmB17zz1dXw_OAMbqOOLh3oXbDlWu_w9ZokS9fSl-z93DFNBxRuc1pCNIuxP3NZtwa6ggS9g7qrj3CV2HtdtXJAbIHZCj62_F-NUhPUnClgNyRtIMEkRYhB6CqYp4tVTPRBcnXA5TE-qeocP4BSVBhR_G_JeCMesO2-Et47jHqdlmBSItq0Q5MMq-opuAKonx7HwDfunzmS7CD_3_-1SdTHK1NMwoTmDRar-EEFiRTSqJSA-FfALFUvOGzb5gvjmQ80=w454-h530-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Mr. Deepak Kumar Pathak</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultydetails/deepak-kumar-pathak" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/m_ILzTMIDTJiZFOGat-HVzHUOXm0AKH1yT7MudjwoYXqyPDyGxgo2CxdSPU1BtRTDEOaxATsdAL9bzWVtimjy2jWxTWb6EQHP_zShFALygGL5fhIhbSEyrosueeYZkGOQN66nWY5GeU3dBy-G5A4_5jbHSR9O7dwELgR0luwzq047LldAwxktt_URz5W6xdtWpKsVnoWT1x5N04-7rOWg9B2KtSuCD3WdYNzrweSpuEH9yF4z1tOxzhXlFhLJTY51_ANIC2jYG2zlR_q8x9XtCrx84tIioQid0Doas1qQHUTgp1IrUWI6iZ4as-KjUWs2Kd70NTU_byYr37_Vyhrwt2U51kGuNxd1NfHf8X9BFwcqwSsuzo_b1mDi-HTcpIMBpfzwzqIm9R8SSF3jxwkk62xbaunUweR8bPvTYuCcxuOdJV5WCYCKd8w3uCgY-U2bdT8q9N4um46O7n7ESY2uJwgFF0LBxpkg1Bpl2YMawZHVT_CiuMn076Qeg_MPcwrRzrEfDAgvfh18Sbah3FOEm5-A3amp9T2JJEklsO5GSYnbdqTSX00gMpgMuPky4Cy9Kv7C4UUaF1yxTV85yy_YhnXVczraLX-HrJe7AnXuNrMMSRj1m6GYpEvpVSkzAYlmsc8uL1Klcu8caSn2K5zHw7Sfsdewyr2jTnjt7oR4IhG4lkFoAXHc0oEesQicIzNonDcOBUlXAccw93mzNIPnAbp=w505-h530-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Mr. Saurabh Kumar Saxena</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultyDetail/saurabh-kumar-saxena" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/LXyynwlKc4Q0j83PNpVe0HF5uPOX_bPpxc0M7-ujXwAy4OGn6h2roA9QKkfe6iJt_oG-sBZsnLLto-a6f7d-uTMecJgCIUx4XT6-fJG07AvYf4nSxunNCaw_bRRCCsmJlGOVE8FN8IBQ_Ku1qIGYFU3S28SqJZ8uvvZqhNXeYwB5bThGF7b3JkWgKIVFol7AOHLl4GCU78PGPSvrc5ZW7yHKU5s-Gm0WpbVNlQZthcLgKhOf4FGUjJxdEapmcuxgNJbF96ZuGD6LL4BuAyGcMLPFa9qtnh7QrKcsxVWobwB-8BUetNJdHCf6i31DzamR7tBNlTpVvtfyjEUfnF-gItHqNbbrGuzSwRmoIx2LseN8V01vKmLCZMxELcXzZaAXtpyvkkgMXu66346bKLKltAc_PFIO4_Ug3qJecLv1_6s1TlAvb7PGUt8W196vUa-DvC8j5jueRWltEO1kgMQEIHs1A6iwTeCRyIAKYrUKXnrRyvgAHCWsLcJfjebpgKkQt1PDDm2FBirfTmg0jhnnFvuXFNPsTJBJf1P7rIpPSq9WO0NlRol-saxwZIbQJCCQ_PJti_OSwbqzU8_lFztGNHy9rIMDV_iCBP2UZ9xaJehABf6VWyuIu0gIDaWky_ev6xTUUz4HxV1DZ8LiM6dVoiVHYy1MD0pDNEvhm6_qgdTGWj51A_GwuVFDnEw5xEMCs_9jIbbYvMxUPLXDdaqZ9_1h=w416-h530-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Ms. Kalpana Gangwar</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultyDetail/kalpana-gangwar" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/79Kl3aOxUpHYH1GOE2yKOAO_FXnFuBO7PnFSBs2CfnOCuU21h_l1S-375hBSQINt1pn07fcCUH3a-Rub5MdyfU8gEQMUoYfF-w3dS18ma0Zw_erJY0gUHWrns5sNoB-7qaUp9FxfRJUB7KM8o2lm7L9jNDxGoPR3PGgOKDmn3z8N96AmkI0GhycRSuexCc5OkD5DFe_IWZgazYes6XC1hxbymHw30B2nVXGA5xhrNo1xMVKIyUvAfxhrkBVAaGPW4Hl1PxSTSWrwR_xzoHkynbTB54Tzbf6yWoHTBW6zzBTbnEUhNepLDBm5fMNiK3kRVwJg2MqQnFq5Sv2Nvd0lyqyf8n_0V2nfG0bKPBIU7ISIgOq5spMM46bYYPLqWUluBIvnA_yZvDxlwX-0M7-xYYywUIFtzmIh6CHNpYVZQTLk27WMywAEt-cWzX8roUvxAzG4FhI6Y75V6nR3eusN5gMl4SaTcJt-Oxk6uxiLEJFZ3FlkhT6V5ayM6A1vMouoHI89pSigVGucQUC_Z65qxs4197VXnpFRCMrs3-t0TeihHUOq7Udn7Uug-t7R4HfCbnc4noRwrLPyzYB3pQwkGeY_3AWBWJyGm3LJQs5RZXz5iFYhKB2u6qFMjFjAQ3grExkY65HiXuvgK88IFc1qGKVE1Neh_73_V8D47dBbdUWxnC-wLEmbq1Jvk79xx0JZWCjuQ1zcpRim7u2b3YaQ5Ryb=w609-h600-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Ms. Shivangi Ghildiyal</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultyDetail/shivangi-ghildiyal" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/h2cg8V8nsYKppgaN-X5Bp49nQY6KjCxFsQSvut-X-Gl-T993dHH5Xn2Tapg7WdMFFnjEQogeJurSBxcjIOvv6WXWr-0fdcxlRDeqgC1evSuueDqZ0a0HYrl96J7m5GG8YLq8E2K2LpxsR5Cp0tGMYHc_EnQsos8UgE-0m8vmFHZkWNXAwAqVCzYFz9DIUPsQGLZzTvDyqQK8HK0YTcdM4mIfmFuHjEmO2Znl4fcq0iNTIx7IlJEpfPohBF1eTw_6Gz83AnhxYG59OhOljOGVtNx58zgNbzms5W3A7Uqqrnj6vCNN9Kw6g-zX3i8IP6_7BO_vyw-MYOSa-sxlPUSfd2ic6pS-p_fN4SLAGITL4UHLxjCQ_ou08wkVUcEhlJKlmw4U1QANVwven6ZA3_ClRluuHKhxrE4QMDQqz9ZNe3XKT6AqnbM2UCXjEJsUbU2MwJazB9nLcoVEjXb99KjAB3-pQR74FtuVBdudOY4PTMvYs-dwPDJQn2eF4DjHiuVV6ajf68HPg00M5qa1i11jH00Gd6oMKqp3UDY2quclpgtKKqZvya_2gs_FOLgvI_Aqcf_EcLnZIikF-L7kBWjY2HsTpLYgBMlXVGgcaWbuV5tsmyPeDQQ8rny9Are9GokWj0XZPlH_Tg47WMrxvFut_frZk0PXoSr5pA3YE9BRDpewr99I4zpnNC1kP7UQjM2APAu7SscW2DqnbgVOyCgXtFI-=s500-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Ms. Archana Saxena</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultydetails/archanasaxena" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/ZV4QwkmHtyHHYZrp1CKKTE3KsdgRPrKfSVI_SieruEiWCvxkWt9qBTuZL7PRE7Gk5AeEqDcFbSpAyqYK2sAVx-mmAdAWhrVwL5jnZj40LW8L50HiyEqHABfHVHZuYlEN-GX_AV4sWaNGgjb-VUleJGPgvQ-vNyZTOXwSufWMGIf8QeibSd_4i__g5K67YefGNA4imxPCHXVM-05G8rixyVxKLSqe7GKnEXyozfkV13Yt5HbcU6EGNeDdsvhiqJI1sANYdejIkb8IKrw7MuamKbeEj1nxcvY0ooPLIUlV4fChhKp_O3pp2WGJpvUyjxHyhvdAq3-47_hb_2OKE1inJgTy3yFhDwx3T4nBG8IJK8OI49X1zbmXf7XlB2SVZX2_kNJm0WlILNOPsdPNT3AycOKQnAUx9GIx7MiHwWKO9a0Q-JDtFTsS9ZlP5J21rMlHNVUkKJmwthiE5SEFtfbdHGloHZHeMAdquW_J0r7ieMQ0Zgjz5hXK7M4C1LwDaxHDLV6AktiEuzZfQpegMAr0N2GOmH_mao7JriLC6gvsBiK-kqtErdLxmC7DCoKqtxQU8A8AUxxfnqXyaxFuJQHqXaibNQ74acaGET_1mhMSN5Vv3AFl8KlJX0RTg9ko9A99oMI3Jg6oIpX2i8Q3b-p3eeo_ifNyI0RNUU_SaehqXBEqCW4lcTTRr5RHhPT5XVQlDgC9DHLAfa3KD1BlVPuklA6q=s500-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Mr. Kushal Johari</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/Faculty/facultyDetail/107" target="_blank"><input type="submit"
+            id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/s-pLwzKlCvN2mHL6l38iM5G77FvFNTLkghnpz4yftH3XkBZaR-6J9h5yaCYzHanua7hVAnzvnEuFhBiatK78YGlx4pEJfYN1_vF2HNOk-zxl-Dkay8GLkWJEdcGppdsAsolGVointMlurlvFG3xCIdl8anx5-6FS9IG7TVshc_M_1tSqfS_iAMOjijWL6JsL7_qoIn_qUQSl9kbcgusaqo_PE5pmgFP-mWTIES5Lh6fNMUMoYfBLefzJUa52gfSoT0iCu7As3AsKTGUyO3iMSVrKcwF3zlalIdnJ-4sEiYWPkh7wiYVfCxovcbfJOn6BK31SlqfjlR5SzSU1jqKVuqmoIGaTpqIQeACtEowCgzOEenF36G1CIaFu3k2jU7ZFyI_EovfWpF8NhCOqZa0CgNBfQDdMjYHdhHoIn1IY5ZjRK9PcGq29l4-DYqsu78V77xVUP3PFFmShbQD6KD5-cSTKBHiPakiMNjAGM60NZXO6stLjAtuR4kSX4aKHEs0FDerhXwHmQg-I8_erybi528ebv1k9bnNZxH9YEoIjb9GTs5F7zTXbGqmcLIf7puRLevIk51OGuDZpHiRMupiOuTI21OMQqTwkJEIms9bt2MAp92FbWkhNmDifTxi29kD1SZEK7pQiGMt-Ta9GqGowCuvgiZxCREeXwql1tXSzXdd6YYo4SNSsjT-FPkfpmZIaN7_uZAZzcq1KRUL2fZ1NE7Oh=s316-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Ms. Nishu Rastogi</h1>
+        <br>
+        <h4>Assistant Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultydetails/nishurastogi" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="fac">
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/lvR8DkPI3TzFuHXsYX1qn15acl_k4vFnxP6p-JudzEcFmQjQtXtKYk25xU4qpn1V9nNH7BYiX87ne8doEaxCugwYUNGd43Sp-h3J4y5Xhu6hzm7v_At7PUdDgpv_pAVTEmbJFiQJM-0i6GEVRN4rn8WnU1mo0q294EfIiGghiEHfeFItJ_KFp_8YTEdl-YgdTVJ88yTbkz6zFxZaiEdjvvEs10nhgTOjeo6Rph2hk1lFnQswwjk_bnsfVlwyr0dmmF38qeYVVOnwXwQ8wWVNz1xZQ6kfV8-Ifdx5hN4L8Qdh57V_0TxCkreFp0zmlSztjdJ6-_6CFVsthb2bfBhOrRD9kuHfjeB-BtFO0Ou3f_hh0X1xsyb0B4f6hJjzaKugISkCNH-BxgFmdTdjdbzaxSo-DvVtnYRldBMvJmnrhzjH26kx7X18SwdsVujPSg_X4gLx4j_Y4gihJQVI7h5n1PrHzohlh1FUPSb0DTmlea6XXcPZBNj7LO5U6Faeg0dy8q4R1BsRZYTJffjEkXblTsh8mrwq0cCIhu6lYTvXHiDTWTm8B-ZwXW79yexQwSGb5ZLlBvOJRDAWoQxcEDn0CRAWMyBOA7cHTPbex-bl6GerbtcboXOU3SWRQz80fLddvKWEODv6iSR70tzuiZvyqVWz2jq4idbHxd3xP5a8DGEH0bxlroGsd0VlXaZ5ODXjY67K2-mR9gJIVyyh9H3NHoN_=s500-no?authuser=0"
+          class="facul" alt="">
+      </div>
+      <div class="spc">
+        <h1>Mr. Amit Taneja</h1>
+        <br>
+        <h4>Associate Professor</h4>
+        <hr>
+        <br>
+        <h5>Computer Applications</h5>
+        <hr>
+        <br>
+
+        <a href="https://www.invertisuniversity.ac.in/faculty/facultydetails/amittaneja" target="_blank"><input
+            type="submit" id="details" value="For More Details Click Here" /></a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy;
+    2021
+    department of computer applications invertis university
+
+    <button id="right"><a href="#btn"><b></b>&and;</b></a></button>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.ch3 {
+  height: 100vh;
+  color: aliceblue;
+  background-color: black;
+}
+.m2{
+   background-color: red;
+   height: 90vh;
+   width: 20vw;
+   position: relative;
+   top: 10vh;
+   align-self: right;
+   /* display: inline; */
+   /* z-index: 5; */
+}
+.li1{
+  color: black;
+  text-decoration: none;
+  list-style: none;
+}
+.m2:hover{
+
+  background-color:white;
+}
+#mar{
+  height: 50vh;
+  width: 50vw;
+  z-index: 1;
+}
+   
+   
+   
+
+
+

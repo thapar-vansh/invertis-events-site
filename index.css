@@ -1,0 +1,133 @@
+/* Akshat Code */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.nav{
+  border: 4px solid rgb(219, 10, 10);
+  height: 100px;
+  width: auto;
+  background-color: rgb(247, 17, 17);
+}
+
+.nav1 ul li{
+  /* border: 8px solid whitesmoke; */
+  width: 500px;
+  text-align: center;
+  margin: 30px 1005px;
+  color: white;
+  text-align: right;
+}
+.nav1 ul li a{
+  margin: 50px 20px;
+  color: black;
+  font-size: 22px;
+  color: white;
+}
+
+.he{
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+  color: aliceblue;
+}
+.iica{
+  border-radius: 50%;
+  width: 20ch;
+}
+/* first div (programming languages) */
+
+.m1 {
+  display: grid;
+  height: 500px;
+  row-gap: 10px; 
+  padding-top: 80vh;
+ }
+.mp1 {
+  width: 880px;
+  font-size:20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.m1 h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: bold;
+}
+.m1 img {
+  justify-self: right;
+  position: absolute;
+  right: 20px;
+  height: 300px;
+  width: 450px;
+  padding-top: 20vh;
+}
+
+/* Invertis Images */
+.invertisimg{
+  position: left;
+  justify-self: left;
+}
+.invertisimg1{
+  position: right;
+  justify-self: right;
+}
+.setimg{
+           
+  position:absolute;
+  justify-self: left;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  left: 20px;
+  height:500px;
+  width: 500px;
+  padding-top: 5vh;
+
+  
+}
+.setimg1{
+           
+  position:absolute;
+  justify-self: RIGHT;
+  padding-left: 110vh;
+  padding-bottom: 20px;
+  left: 20px;
+  height: 500px;
+  width: 500px;
+  padding-top: 5vh;
+
+  
+}
+
+/* dark mode */
+.mode {
+  float:right;
+}
+.change {
+  cursor: pointer;
+  border: 1px solid #555;
+  border-radius: 40%;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.dark {
+  background-color: #222;
+  color: #e6e6e6;
+}
+
+
+/* dark end */
+
+
+
+footer {
+   
+  bottom: 0;
+  height: 10vh;
+  font-size: 40px;
+  
+}
