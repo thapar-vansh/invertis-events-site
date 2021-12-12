@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 
 app.post('/add', async (req, res) => {
   let {
-    id,
+    std_id,
     name,
     course,
     sem,
@@ -30,9 +30,9 @@ app.post('/add', async (req, res) => {
     descr,
   } = req.body
   conn.query(
-    'INSERT INTO eventdetails (id, name, course, sem, contact_no, email, evt_name, duration, date, conv_name, descr ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)',
+    'INSERT INTO eventdetails (std_id, name, course, sem, contact_no, email, evt_name, duration, date, conv_name, descr ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)',
     [
-      id,
+      std_id,
       name,
       course,
       sem,
