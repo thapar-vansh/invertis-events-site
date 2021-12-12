@@ -11,13 +11,14 @@
 
   <title>Upload Your Event Proposal</title>
 
-  <script src="darkmode.js">
+  <!-- <script src="darkmode.js"> -->
   </script>
-
 </head>
 
 <body>
+
   <p id="btn"></p>
+
   <div class="blue">
     <marquee scrollamount="8" direction="right">
       <h3>Welcome To Department Of Computer Applications</h3>
@@ -26,7 +27,6 @@
 
   <header>
     <ul class="nav">
-
       <li class="nav1">
         <a href=https://www.invertisuniversity.ac.in target="_blank">
           <img
@@ -76,15 +76,12 @@
 
 
               <span class="change">OFF</span>
-
-
             </div>
-
           </div>
         </div>
       </li>
     </ul>
-    <script>
+    <!-- <script>
       $(".change").on("click", function () {
         if ($("body").hasClass("dark")) {
           $("body").removeClass("dark");
@@ -94,9 +91,7 @@
           $(".change").text("ON");
         }
       });
-    </script>
-
-
+    </script> -->
   </header>
   <br>
   <br>
@@ -114,46 +109,60 @@
           <label><b>Course</b></label><br>
           <input type="text" placeholder="Course" id="stdCourse" required><br>
           <label><b>Semester</b></label><br>
-          <input type="text" placeholder="Enter semester" id="stdSem" required><br>
+          <input type="number" placeholder="Enter semester" id="stdSem" required><br>
+          <label><b>Contact No.</b></label><br>
+          <input type="number" placeholder="Enter contact no." id="stdCon" required><br>
+          <label><b>E-mail</b></label><br>
+          <input type="email" placeholder="Enter e-mail" id="stdEmail" required><br>
           <label><b>Name of event</b></label><br>
           <input type="text" placeholder="Enter event name" id="eventName" required><br>
-          <label><b>Duration of event</b></label><br>
-          <input type="text" placeholder="Enter event duration" id="eventDuration" required><br>
+          <label><b>Duration of event(in days)</b></label><br>
+          <input type="number" placeholder="Enter event duration" id="eventDuration" required><br>
           <label><b>Date of event</b></label><br>
           <input type="date" placeholder="Enter event date" id="eventDate" required><br>
-          <label><b>Event description</b></label><br>
-          <input type="text" placeholder="Enter event description" id="eventDesc" required><br>
           <label><b>Conveyner's name</b></label><br>
           <input type="text" placeholder="Enter conveyner's name" id="eventConv" required><br>
+          <label><b>Event description</b></label><br>
+          <input type="text" placeholder="Enter event description" id="eventDesc" required><br>
 
           <input type="submit" value="Submit">
         </form>
+        <div id="result"></div>
         <script>
           var form = document.querySelector("#eventDetails")
-          formId.onsubmit = async (e) => {
+          eventDetails.onsubmit = async (e) => {
             e.preventDefault();
             data = {
-              student_Id: form.querySelector('input[id="stdId"]').value,
-              student_Name: form.querySelector('input[id="stdName"]').value,
+              id: form.querySelector('input[id="stdId"]').value,
+              name: form.querySelector('input[id="stdName"]').value,
               course: form.querySelector('input[id="stdCourse"]').value,
-              semester: form.querySelector('input[id="stdSem"]').value,
-              event_Name: form.querySelector('input[id="eventName"]').value,
-              event_Duration: form.querySelector('input[id="eventDuration"]').value,
-              event_Date: form.querySelector('input[id="eventDate"]').value,
-              conveyner_Name: form.querySelector('input[id="eventDesc"]').value,
-              description: form.querySelector('input[id="eventConv"]').value
+              sem: form.querySelector('input[id="stdSem"]').value,
+              contact_no: form.querySelector('input[id="stdCon"]').value,
+              email: form.querySelector('input[id="stdEmail"]').value,
+              evt_name: form.querySelector('input[id="eventName"]').value,
+              duration: form.querySelector('input[id="eventDuration"]').value,
+              date: form.querySelector('input[id="eventDate"]').value,
+              conv_name: form.querySelector('input[id="eventConv"]').value,
+              descr: form.querySelector('input[id="eventDesc"]').value
             }
+            let response = await fetch('http://127.0.0.1:3000/add', {
+              method: 'POST', // or 'PUT'
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            })
+            let text = await response.text(); // read response body as text
+            document.querySelector("#result").innerHTML = text
           }
         </script>
       </center>
     </div>
-
   </main>
   <footer>
     &copy;
     2021
-    department of computer applications invertis university
-
+    Department of Computer Applications Invertis University
     <button id="right"><a href="#btn"><b></b>&and;</b></a></button>
   </footer>
 </body>
