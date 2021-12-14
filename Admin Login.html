@@ -76,30 +76,15 @@
 
               <span class="change">OFF</span>
 
-
             </div>
-
           </div>
         </div>
       </li>
     </ul>
-    <script>
-      $(".change").on("click", function () {
-        if ($("body").hasClass("dark")) {
-          $("body").removeClass("dark");
-          $(".change").text("OFF");
-        } else {
-          $("body").addClass("dark");
-          $(".change").text("ON");
-        }
-      });
-    </script>
-
-
   </header>
   <main>
 
-    <form name="f1" action="authentication.php" onsubmit="return validation()" method="POST">
+    <form id="loginForm">
       <div class="imgcontainer">
         <img
           src="https://lh3.googleusercontent.com/pw/AM-JKLXPOJ15ANyb7x-ipXXsL_zsYCVeBLQNKjMEPS5lcZW5UjJhsmiL7aRxMwdlC-HFaH0OE1adcNsRiCbXV5HWfm52wFac92f2nnxVlfS6hMRTZC7PVPK6YhNOm1Bz1F31_kAoDKSTYV49ShuH9emeU18=w225-h224-no?authuser=0"
@@ -108,32 +93,39 @@
 
       <div class="container">
         <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="user" required />
+        <input type="text" placeholder="Enter Username" id="user" required />
 
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="pass" required />
+        <input type="password" placeholder="Enter Password" id="pass" required />
 
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login">
 
       </div>
     </form>
+
+    <div id="result"></div>
+
     <script>
-      function validation() {
-        var id = document.f1.user.value;
-        var ps = document.f1.pass.value;
-        if (id.length == "" && ps.length == "") {
-          alert("User Name and Password fields are empty");
-          return false;
+      var form = document.querySelector("#loginForm")
+      loginForm.onsubmit = async (e) => {
+        e.preventDefault();
+        data = {
+          user_id: form.querySelector('input[id="user"]').value,
+          password: form.querySelector('input[id="pass"]').value
         }
-        else {
-          if (id.length == "") {
-            alert("User Name is empty");
-            return false;
-          }
-          if (ps.length == "") {
-            alert("Password field is empty");
-            return false;
-          }
+        let response = await fetch('http://127.0.0.1:3000/login', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        let text = JSON.parse(await response.text()) // read response body as text
+        console.log(text)
+        if(text === true){
+          window.location.href = "Current Events Approved.html"
+        }else{
+          document.getElementById("loginForm").reset()
         }
       }
     </script>
@@ -146,7 +138,7 @@
   <footer>
     &copy;
     2021
-    department of computer applications invertis university
+    Department of Computer Applications Invertis University
 
     <button id="right"><a href="#btn"><b></b>&and;</b></a></button>
   </footer>

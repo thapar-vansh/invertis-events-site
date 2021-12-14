@@ -58,6 +58,26 @@ app.post('/add', async (req, res) => {
   )
 })
 
+app.post('/login', async (req, res) => {
+  let response
+  const { user_id, password } = req.body
+  conn.query(
+    'SELECT password FROM login  WHERE user_id = $1',
+    [user_id],
+    (err, result) => {
+      if (err) {
+        console.log(err)
+      } else if (result.rows[0].password == req.body.password) {
+        response = true
+      } else {
+        response = false
+      }
+      res.send(response)
+      console.log(response)
+    }
+  )
+})
+
 app.listen(3000, () => {
   console.log('Example app listening at port 3000')
 })
