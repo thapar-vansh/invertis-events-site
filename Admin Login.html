@@ -121,10 +121,10 @@
           body: JSON.stringify(data),
         })
         let text = JSON.parse(await response.text()) // read response body as text
-        console.log(text)
         if(text === true){
           window.location.href = "Current Events Approved.html"
         }else{
+          document.querySelector("#result").innerHTML = 'EITHER USERNAME OR PASSWORD USERNAME '
           document.getElementById("loginForm").reset()
         }
       }

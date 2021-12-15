@@ -67,13 +67,16 @@ app.post('/login', async (req, res) => {
     (err, result) => {
       if (err) {
         console.log(err)
-      } else if (result.rows[0].password == req.body.password) {
-        response = true
+      } else if (result.rows[0]) {
+        if (result.rows[0].password == password) {
+          response = true
+        } else {
+          response = false
+        }
       } else {
         response = false
       }
       res.send(response)
-      console.log(response)
     }
   )
 })
