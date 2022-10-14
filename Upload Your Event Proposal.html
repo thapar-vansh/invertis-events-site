@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="nav bar.css">
+
+  <link rel="stylesheet" href="upload your event proposal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>Upload Your Event Proposal</title>
 
-  <script src="darkmode.js"> 
+  <script src="darkmode.js"></script>
+  <script>
+    window.alert('Kindly Fill The Details Correctly At Time Of Form Filling!');
   </script>
 </head>
 
@@ -40,7 +44,7 @@
       </li>
 
       <li class="nav1">
-        <a class="nav2" href="course.html" target="_blank"> <i class="fa fa-graduation-cap"></i> Courses</a>
+        <a class="nav2" href="course.html"> <i class="fa fa-graduation-cap"></i> Courses</a>
       </li>
 
       <li class="nav1">
@@ -49,18 +53,18 @@
           <div class="event-content">
             <a href="Upload Your Event Proposal.html"> <i class="fa fa-calendar-plus-o"></i> Upload Your
               Event Proposal</a>
-            <a href="Current Events Approved.html" target="_blank"> <i class="fa fa-calendar-check-o"></i> Current
+            <a href="Current Events Approved.html"> <i class="fa fa-calendar-check-o"></i> Current
               Events Approved</a>
-            <a href="Event History.html" target="_blank"> <i class="fa fa-calendar"></i> Event History </a>
-            <a href="Admin Login.html" target="_blank"> <i class="fa fa-user"></i> Admin Login </a>
-            <a href="Details.html" target="_blank"> <i class="fa fa-bars"></i> More Details </a>
+            <a href="Event History.html"> <i class="fa fa-calendar"></i> Event History </a>
+            <a href="Admin Login.html"> <i class="fa fa-user"></i> Admin Login </a>
+
           </div>
         </div>
       </li>
 
       <li class="nav1" class="aKp a  Ke-aLf" style="user-select: none;">
-        <!-- <div class="aKp aKe-aLf" style="user-select: none;"> -->
-        <a class="nav2" href="About Developers.html" target="_blank"> <i class="fa fa-user"></i> About Developers</a>
+
+        <a class="nav2" href="About Developers.html"> <i class="fa fa-user"></i> About Developers</a>
       </li>
       <li class="nav1">
         <div class="more">
@@ -68,19 +72,25 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="more-content">
-            <a href="Contact Us.html" target="_blank"> <i class="fa fa-address-book"></i> Contact Us</a>
-            <a href="faculty.html" target="_blank"> <i class="fa fa-group"></i> Faculty</a>
+            <a href="Contact Us.html"> <i class="fa fa-address-book"></i> Contact Us</a>
+            <a href="faculty.html"> <i class="fa fa-group"></i> Faculty</a>
 
             <div class="mode"> <i class="fa fa-moon-o" style="font-size:20px"></i>
               Dark mode:
 
-
               <span class="change">OFF</span>
+
+
             </div>
+
           </div>
         </div>
       </li>
+
     </ul>
+
+
+
     <script>
       $(".change").on("click", function () {
         if ($("body").hasClass("dark")) {
@@ -93,70 +103,179 @@
       });
     </script>
   </header>
-  <br>
-  <br>
+
   <br>
   <br>
   <main>
-    <div>
-      <center>
-        <h2> Upload your Event</h2>
-        <form id=eventDetails>
-          <label><b>Student Id</b></label><br>
-          <input type="text" placeholder="Enter Student Id" id="stdId" required><br>
-          <label><b>Student Name</b></label><br>
-          <input type="text" placeholder="Enter your name" id="stdName" required><br>
-          <label><b>Course</b></label><br>
-          <input type="text" placeholder="Course" id="stdCourse" required><br>
-          <label><b>Semester</b></label><br>
-          <input type="number" placeholder="Enter semester" id="stdSem" required><br>
-          <label><b>Contact No.</b></label><br>
-          <input type="number" placeholder="Enter contact no." id="stdCon" required><br>
-          <label><b>E-mail</b></label><br>
-          <input type="email" placeholder="Enter e-mail" id="stdEmail" required><br>
-          <label><b>Name of event</b></label><br>
-          <input type="text" placeholder="Enter event name" id="eventName" required><br>
-          <label><b>Duration of event(in days)</b></label><br>
-          <input type="number" placeholder="Enter event duration" id="eventDuration" required><br>
-          <label><b>Date of event</b></label><br>
-          <input type="date" placeholder="Enter event date" id="eventDate" required><br>
-          <label><b>Conveyner's name</b></label><br>
-          <input type="text" placeholder="Enter conveyner's name" id="eventConv" required><br>
-          <label><b>Event description</b></label><br>
-          <input type="text" placeholder="Enter event description" id="eventDesc" required><br>
 
-          <input type="submit" value="Submit">
-        </form>
-        <div id="result"></div>
-        <script>
-          var form = document.querySelector("#eventDetails")
-          eventDetails.onsubmit = async (e) => {
-            e.preventDefault();
-            data = {
-              std_id: form.querySelector('input[id="stdId"]').value,
-              name: form.querySelector('input[id="stdName"]').value,
-              course: form.querySelector('input[id="stdCourse"]').value,
-              sem: form.querySelector('input[id="stdSem"]').value,
-              contact_no: form.querySelector('input[id="stdCon"]').value,
-              email: form.querySelector('input[id="stdEmail"]').value,
-              evt_name: form.querySelector('input[id="eventName"]').value,
-              duration: form.querySelector('input[id="eventDuration"]').value,
-              date: form.querySelector('input[id="eventDate"]').value,
-              conv_name: form.querySelector('input[id="eventConv"]').value,
-              descr: form.querySelector('input[id="eventDesc"]').value
-            }
-            let response = await fetch('http://127.0.0.1:3000/add', {
-              method: 'POST', // or 'PUT'
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(data),
-            })
-            let text = await response.text(); // read response body as text
-            document.querySelector("#result").innerHTML = text
-          }
-        </script>
-      </center>
+    <div class="he"> Department of Computer Applications <br> Invertis University
+      <br>
+      <br>
+      <div>
+        <img
+          src="https://lh3.googleusercontent.com/x8563d92PxtsMSM9GlvkLKmQH9ztRdrsMP0M7bVXK4F8kVWKsBnNNNLrF12AhAbje39oAcO9zCt-ARSBiwsTnIVzQmOb9GkwQNjoQmH8Swxdn1NBoXNVoj9ZatOIIpAI7z__5bdgWihie38qdJMggUUu-_e_L0b1TQAyxT-pKq0JNRNlDdpZzbLXLlcKIW80paynOA94ArrNkJlIQXkKzvM-mIoLSgw67aa2u0DkllGRRQTnMfpbHlZmRpIzMoHINZouC9yUFXhDy3KhWDJ6pzjIl_4x78zcLK_i-jug0LfeOrTST7jDfVOUv4bYSmmfnEgCsL0HYKB3p5gPMZDq9QDTYyZ-EfUoZNrVRtiiGmPLkTpoVfwiaC0ovgQncyW5e0to-nmX_DQtHvijONQP78-UKTwiS-yClDUzwDQnhwvAWfOhZUUGCFQmRtZ4M4x5dVTznzxP5M_wHumvhkRdNuIaE4K4D78InjRAkXH1S3ollGxpkb_wXRaCYUA7dHoz1PtX7QovHVvcwv8e2kACBRRzdE3DnbG8yZHYuuVfhomeS5Q0ForZqzGE5WV7vOX61GUrcQDe0qeZaQ3U-DU11LYrT8N6IPlvxvtABr9QtyR_Yc8KHa7aNBFZPUif6zvU6NR-fOF1ASguaVUDZ6Zq52R4BWwc44LfitBnBIX7LpXBATOGm-6o5hDCQ0lXND9_-rKhGc--BTj5mfYBgNxXfoea=s220-no?authuser=0"
+          alt="" class="iica">
+        <div class="slideshow-container">
+
+          <span class="mySlides" id="ms1">
+
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLVeXJtkU2y0eQPVRfqHKdLKx6GEvmmR8scIli3kEhJKId0uyAj_kMU396LyHATVhA8A9U2GGjt0PFCoOVBZERKeYE0nFrG_tGjsLm9z_qYohM2SHiN0-EWhIspV3u_0EXIuixMr31UeCrWMddsI4AyG=w1065-h600-no?authuser=0"
+              class="imgwd">
+
+          </span>
+
+          <span class="mySlides" id="ms1">
+
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLW66b3Nr966rehhNh19X-my1HXz2R9ErQg0vk1u1nP8lWPdzkn6Csfp45YFmN9Svl0z7xpWbc4dMngbP6ClEgTU8mdeYvaAuFGPxdwqbx4v0pr_yOuqCd1CuROUMpsCkFM5zWbaF3v1RYcAbBpIMlcF=s600-no?authuser=0"
+              class="imgwd">
+
+          </span>
+
+
+          <span class="mySlides" id="ms1">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLWbowpk1vUVQU2L8vWGDaXQRU_oVy-cNR30nJh95-W6xaouLxCKq_BM537ZJwZJvS9tHg0gMxiLapXTeZVUln2Pc1HMN70EPoGikSsq5aE2kpT4FoFzYjEQgz8YXPhTlWk82pJok0SeWgQe9VU8dHG_=w397-h530-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+
+          <span class="mySlides" id="ms1">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLXk44oyb5rLzeDsmMkZIU6aUvONGvHy09uzkZFNwQ6UOTJgV5Sqaf6KsBZJADdpYbAasbK9ZG-n1JJEFoGLBRip6Js6xfONIvh5fJwVi3Dybou-X9h4JXO5XXAjEk7D3QLZl-n4zpi1pwkV3X8bRPZ6=s600-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+          <span class="mySlides" id="ms1">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLUHOoOl_CcyCl6rTFdf9OQU_HGg_EKKwAJxsy0eAHLLVpwFDakKR3cGTZ0wKmMgl5mifxB0pA2_UJeg9agW-35rAf_ELoC3u7lEOeha5azTiGwzCCuAucFKHlYyEIzMMYPRcjXF8KeD4qsMXGX99E_3=w296-h83-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+
+          <span class="mySlides" id="ms1">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLWlFSp4ppmWmUggvAcv6TL5Q5LU0HO66S9FbRPNA7Q5iI_b5iAyC_3hjO253UZcezcnBVpzknZPxGSQdNYZq2bqCExKrWX5jX6bN2ffYERqIaevinfkE6F_pvGR99exxyE93IYHX4BTewSe5WdbcqQf=w1067-h600-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+          <span class="mySlides" id="ms1">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLUWuGv_z6UGnSBbTCUtYCoFUcRT4RCvzp_BI6c98e7HAdpHQ8Z0KLbDjN-BxZ45en5UZpKFg3NCPiOv1gqolcM7Y5f2XYdo-NR7CEyQamJJjlzaDTEBMJk-LbFq_SAKuJwkaHENpUqUJFDEmwwOx5PJ=w313-h161-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+          <span class="mySlides" id="ms1">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLUxqKoDMUr6ntUbK6OppljBQzQGM5zhpT8wP9HkldT38-QexheflhNN45aRcFET-X0HVcbt2OXsNUBUVK2envh039OzJzYjQBHzq08bYWm97yENWRkMCPJpyGjCSsp_IfiRHa_4PdXWpKyafiFgPfwv=w510-h99-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+          <span id="ms2">
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLUUWQxt_D4zRxOu8ESq4wNWsY9isYvzgbTKvgW0fF5Nf1dsfWu9LCrpM7gnRkO19r3lYKSiuxQXqxEA9MUaCeDthctGUmKtR4FLdKTUcCrz5qEifZdDs95XJFvIyuMUUt5L3HC0w2eBzGt0IPa0NqvF=w1037-h600-no?authuser=0"
+              class="imgwd">
+
+
+          </span>
+
+
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+
+
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+    <div>
+      <form id="eventDetails">
+        <h2 id="h2"> Upload your Event</h2>
+        <br>
+        <label for="id">Student Id</label>
+        <input type="text" placeholder="Enter Student Id" id="stdId" required><br><br>
+        <label>Student Name</label>
+        <input type="text" placeholder="Enter your name" id="stdName" required><br><br>
+        <label>Course</label>
+        <input type="text" placeholder="Course" id="stdCourse" required><br><br>
+        <label>Semester</label>
+        <input type="number" placeholder="Enter semester" id="stdSem" required><br><br>
+        <label>Contact No.</label>
+        <input type="number" placeholder="Enter contact no." id="stdCon" required><br><br>
+        <label>E-mail</label>
+        <input type="email" placeholder="Enter e-mail" id="stdEmail" required><br><br>
+        <label>Name of event</label>
+        <input type="text" placeholder="Enter event name" id="eventName" required><br><br>
+        <label>Duration of event(in days)</label>
+        <input type="number" placeholder="Enter event duration" id="eventDuration" required><br><br>
+        <label>Date of event</label>
+        <input type="date" placeholder="Enter event date" id="eventDate" required><br><br>
+        <label>Conveyner's name</label>
+        <input type="text" placeholder="Enter conveyner's name" id="eventConv" required><br><br>
+        <label>Event description</label>
+        <input type="text" placeholder="Enter event description" id="eventDesc" required><br><br>
+
+        <input type="submit" value="Submit" class="btneve">
+      </form>
+      <div class="bgimg ">
+      </div>
+     
+    
+    </div>
+
+    <div id="result"></div>
+    <script>
+      var form = document.querySelector("#eventDetails")
+      eventDetails.onsubmit = async (e) => {
+        e.preventDefault();
+        data = {
+          std_id: form.querySelector('input[id="stdId"]').value,
+          name: form.querySelector('input[id="stdName"]').value,
+          course: form.querySelector('input[id="stdCourse"]').value,
+          sem: form.querySelector('input[id="stdSem"]').value,
+          contact_no: form.querySelector('input[id="stdCon"]').value,
+          email: form.querySelector('input[id="stdEmail"]').value,
+          evt_name: form.querySelector('input[id="eventName"]').value,
+          duration: form.querySelector('input[id="eventDuration"]').value,
+          date: form.querySelector('input[id="eventDate"]').value,
+          conv_name: form.querySelector('input[id="eventConv"]').value,
+          descr: form.querySelector('input[id="eventDesc"]').value
+        }
+        let response = await fetch('http://127.0.0.1:3000/add', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        let text = await response.text(); // read response body as text
+        document.querySelector("#result").innerHTML = text
+      }
+    </script>
+
     </div>
   </main>
   <footer>

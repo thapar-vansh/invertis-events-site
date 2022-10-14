@@ -1,0 +1,128 @@
+*{
+    margin: 0PX;
+    padding: 0px;
+}
+/* Header CSS */
+.he{
+    background-color:cornflowerblue;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: aliceblue;
+  }
+/* Department Logo */
+  .iica{
+    border-radius: 50%;
+    width: 20Vh;
+    display: flexbox;
+  }
+  
+
+/* Slideshow container */
+.slideshow-container {
+   
+  position: relative;
+   top: -35vh;
+  }
+  
+
+  #ms1{
+    float: left;
+  }
+  #ms2
+  {
+    float: right;
+    height: 30vh;
+    width: 15vw;
+ 
+    padding-right: 6vw;
+  
+  }
+ 
+  .imgwd{
+     
+      height: 35vh;
+      width: 20vw;
+      border:5px solid black ;
+      
+  
+  }
+ 
+  /* backgroundImage */
+  .bgimg{
+
+    min-height: 150vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  
+    opacity:0.5;
+    z-index:-1;
+    background-image: url('https://lh3.googleusercontent.com/pw/AM-JKLWTfR-eWdARYFGG5-bVakHEjspP0qxZjnFAAPtvUxWM8ZF4S3kGVdYuk9i9s5JQpeQucl1GvFcDp3pKUf0eqnuAv2aKRFT_jmoG-1u_OxvAGgnpCU5V7Ew5WFAXsGAxMwl0jCBUdE9gcZP2K8hEvlSq=w1066-h600-no?authuser=0');
+
+}
+
+/* form css */
+
+ #eventDetails{
+
+  width: 35vw;
+  margin:21vh 33vh 21vh 0vh;
+  height: 85vh;
+  float: right;
+  color:black;
+
+  flex-shrink: 2;
+  text-align: center;
+  /* border: 5px solid;  */
+ 
+}
+
+
+
+#h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5vh;
+}
+
+#eventdetails,label{
+
+  float:left;
+  position: relative;
+  font-family: 'Roboto',Verdana, sans-serif;
+  line-height: 1rem;
+  font-style: bold;
+  font-size:3vh;
+}
+ 
+#eventdetails,input{
+  float:right;
+  font-family:'Roboto',Verdana, sans-serif;
+    font-size: 1em;
+    border:1px solid black;
+  
+ 
+}
+
+/* submit button */
+.btneve{
+  background: transparent;
+  font-size:3vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border:3px solid Black; 
+  position: relative;
+  right: 12rem;
+  box-shadow: white;
+  cursor: pointer;
+  border-radius: 10vh;
+  padding:1vh;
+}
+.btneve:active{
+  background-color: blue;
+  color: white;
+}
+.btneve:hover{
+
+  background-color:red;
+}
